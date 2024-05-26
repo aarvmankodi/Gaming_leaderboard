@@ -1,0 +1,16 @@
+body
+{
+    background-color: rgb(40,40,40);
+    color: white;
+    text-align: center;
+}
+
+.board
+{
+    /* height : 600px;
+    width : 1000px; */
+    background-color: black;
+    border: 3px solid white;
+    /* border-top-width : 5px;
+    border-bottom-width : 5px; */
+}

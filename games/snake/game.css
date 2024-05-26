@@ -1,0 +1,21 @@
+body
+{
+    background-color: rgb(40,40,40);
+    color : white;
+    text-align : center;
+}
+
+h1
+{
+    text-align: center;
+}
+
+.game
+{
+    background-color: black;
+    border: 5px solid white;
+}
+
+h2{
+    text-align: center;
+}

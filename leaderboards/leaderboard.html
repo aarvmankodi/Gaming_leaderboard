@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboards</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="leaderboard.js" defer></script> <!-- defer attribute ensures that the script is executed after the DOM is parsed -->
+    <link rel="stylesheet" href="leaderboard.css">
+</head>
+<body>
+    <table border="1" id="tic-leaderboard">
+            <caption>Tic Tac Toe Leaderboard</caption>
+        <thead>
+            <tr>
+                <th>Player ID</th>
+                <th>Player Name</th>
+                <th>Matches Won</th>
+                <th>Matches Lost</th>
+            </tr>
+        </thead>
+        <tbody id="tic-leaderboard-body"></tbody>
+    </table>
+    <br>
+    <h2></h2>
+    <table border="1" id="snake-leaderboard">
+        <caption>Snake Leaderboard</caption>
+        <thead>
+            <tr>
+                <th>Player ID</th>
+                <th>Player Name</th>
+                <th>High Score</th>
+            </tr>
+        </thead>
+        <tbody id="snake-leaderboard-body"></tbody>
+    </table>
+    <br>
+    <h2></h2>
+    <table border="1" id="pong-leaderboard">
+        <caption>Pong Leaderboard</caption>
+        <thead>
+            <tr>
+                <th>Player ID</th>
+                <th>Player Name</th>
+                <th>Matches Won</th>
+                <th>Matches Lost</th>
+            </tr>
+        </thead>
+        <tbody id="pong-leaderboard-body"></tbody>
+    </table>
+    <br>
+    <h2></h2>
+    <table border="1" id="2048-leaderboard">
+        <caption>2048 Leaderboard</caption>
+        <thead>
+            <tr>
+                <th>Player ID</th>
+                <th>Player Name</th>
+                <th>High Score</th>
+            </tr>
+        </thead>
+        <tbody id="2048-leaderboard-body"></tbody>
+    </table>
+</body>
+</html>

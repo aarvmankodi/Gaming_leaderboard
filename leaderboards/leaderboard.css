@@ -1,0 +1,22 @@
+body
+{
+    color : white;
+    background-color: rgb(40,40,40);
+    width : 97vw;
+    height : 97vh;
+}
+
+
+table {
+    width : 90vw;
+    height : 30vh;
+    /* border-collapse: collapse; */
+    border: 3px solid white; /* Adjust the thickness as needed */
+}
+
+table th, table td {
+    border: 3px solid black; /* Adjust the thickness as needed */
+    padding: 8px; /* Add padding for better readability */
+    text-align: left; /* Adjust text alignment as needed */
+}
+

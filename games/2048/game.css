@@ -1,0 +1,99 @@
+*
+{
+    margin : 0;
+    padding : 0;
+    color : white;
+}
+
+body{
+    background-color: rgb(30,30,30);
+}
+
+h1
+{
+    text-align: center;
+}
+.game
+{
+    height : 90vh;
+    width : 100vw;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+.board
+{
+    background-color: rgb(24, 78, 119);
+    height : 500px;
+    width : 500px;
+    border : 5px solid rgb(24, 78, 119);
+    display : flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.tile
+{
+    background-color: rgb(40, 40, 40);
+    height : 120px;
+    width : 120px;
+    border :5px solid rgb(24, 78, 119);
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-family: Anta;
+    box-sizing: border-box;
+}
+
+.x2
+{
+    background-color: rgb(30, 96, 145);
+}
+
+.x4
+{
+    background-color: rgb(26, 117, 159);
+}
+.x8
+{
+    background-color: rgb(22, 138, 173);
+}
+.x16
+{
+    background-color: rgb(52, 160, 164);
+}
+.x32
+{
+    background-color: rgb(82, 182, 154);
+}
+.x64
+{
+    background-color: rgb(53, 143, 128);
+}
+.x128
+{
+    background-color: rgb(70, 157, 137);
+}
+.x256
+{
+    background-color: rgb(86, 171, 145);
+}
+.x512
+{
+    background-color: rgb(118, 200, 147);
+}
+.x1024
+{
+    background-color: rgb(153, 217, 140);
+}
+.x2048
+{
+    background-color: rgb(181, 228, 140);
+}
+.x4096
+{
+    background-color: rgb(217, 237, 146);
+}

@@ -1,0 +1,100 @@
+body {
+    background-color : rgb(30,30,30);
+    color : white;
+       /* display : flex;
+    align-items: center;
+    justify-content: center; */
+    height : 95vh;
+    padding : 0px;
+    margin : 0px;
+    text-align: center;
+  }
+
+input
+{
+    background-color : rgb(30,30,30);
+    border : none;
+    width : 70px;
+    color : white;
+}
+.link
+{       
+    margin-top : 50px;
+    height : 250px;
+    width : 250px;
+}
+.box {  
+    height : 250px;
+    width : 250px;
+    background-color : rgb(23, 23, 23);
+    border : 1px solid rgba(16, 8, 37, 0.1);
+    color : black;
+    position : relative;
+    border-radius: 5px;
+    
+    
+    display : flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.game-img
+{
+    height : 100px;
+    /* margin-left : 100px; */
+}
+
+.g2
+{
+    height : 45px;
+}
+
+.zero , .four
+{
+    margin-top : 5px;
+    height : 35px;
+}
+
+.four
+{
+    margin-left : 5px;
+}
+
+.game-2048
+{
+    /* margin-left : 100px; */
+    height : 100px;
+    width : 85px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.container {
+    width : 550px;
+    display : flex;
+    flex-wrap : wrap;
+    gap : 30px;  
+    align-items: center;
+    justify-content: center;
+}
+.box:hover::before{
+    opacity : 1;
+}
+.box::before {
+    background : radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.06) ,
+     transparent 40%);
+    
+    border-radius: inherit;
+    content : "";
+    height : 100%;
+    left : 0px;
+    opacity : 0;
+    transition : opacity 500ms;
+    position: absolute; 
+    top : 0px;
+    width : 100%;
+    z-index: 2;
+
+}

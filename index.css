@@ -1,0 +1,347 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    color: black;
+    background-color: rgb(40,40,40);
+
+}
+
+#nav-button
+{
+    position : fixed;
+    height : 5rem;
+    width : 5rem;
+    bottom : 3rem;
+    left : 47%;
+    border-radius: 50%;
+    border : none;
+    background-color : blue;
+    box-shadow: 0rem 0rem 4rem rgba(0 0 0 /10%);
+    cursor : pointer;
+    /* transform : translateX(-50%); */
+    transition : all;
+    transition-timing-function: ease;
+    transition-duration: 500ms;
+    z-index: 3;
+
+}
+
+
+
+
+
+.span-hover , .span-hover-head
+{
+    transition : all 0.5s ease;
+}
+
+.span-hover:hover
+{
+    font-size: 3rem;
+    text-decoration: underline;
+}
+
+.span-hover-head:hover
+{
+    font-size : 5rem;
+    text-decoration: underline;
+
+}
+
+#nav-button:hover
+{
+    animation: none;
+    transform : scale(1.05);
+
+}
+
+#nav-button:active
+{
+    animation : none;
+    transform : scale(0.95);
+}
+
+i
+{
+    /* width : 3rem;
+    height : 3rem; */
+    position : absolute;
+    left : 36%;
+    top : 30%;
+    font-size: 2rem;
+    opacity : 0;
+    /* transform : scale(0.9); */
+    transition : all;
+    transition-timing-function: ease;
+    transition-duration: 500ms;
+}
+
+.arrow
+{
+    top : 25%;
+    opacity : 1;
+    animation: bounce 2s ease infinite;
+    animation-delay: 1s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(7px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+    
+}
+
+#nav-button:hover > .arrow
+{
+    opacity : 0;
+}
+body[data-open='true'] > #nav-button > .arrow
+{
+    opacity : 0;
+}
+
+body:not([data-open="true"]) > #nav-button:hover > .open
+{
+    opacity : 1;
+}
+
+body:not([data-open="false"]) > #nav-button > .close
+{
+    opacity : 1;
+}
+
+h1
+{
+    margin-bottom : 200px;
+    color : white;
+    font-size: 2.5rem;
+}
+
+.main
+{
+    /* background-image: url(forbiddenwallpaper.jpg); */
+    height : 100vh;
+    width : 100vw;
+    font-size: 1.5rem;
+    color : orange;
+    background-color: rgba(40,40,40,0);
+    text-align: center;
+    
+    transition : transform 500ms ease;
+    position : absolute;
+    z-index: 2;
+    
+    background-image: linear-gradient(130deg, #ff5300 0%, rgba(34,8,109,1) 20%, rgba(9,9,121,1) 50%, rgba(39,8,106,1) 80%, #ff5300 100%);
+}
+
+.images
+{
+    margin-top : 50px;
+    width : 100vw;
+    height : 100px;
+    display : flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.game-img
+{
+    height : 100px;
+    /* margin-left : 100px; */
+}
+
+.g2
+{
+    height : 45px;
+}
+
+.zero , .four
+{
+    margin-top : 5px;
+    height : 35px;
+}
+
+.four
+{
+    margin-left : 5px;
+}
+
+.game-2048
+{
+    /* margin-left : 100px; */
+    height : 100px;
+    width : 100px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    
+}
+
+body[data-open="true"] > .main
+{
+    transform : translateY(-14rem);
+}
+
+body[data-open="true"] > #nav-button
+{
+    transform : translateY(-14rem);
+}
+
+/* body[data-open="false"] > #nav-button
+{
+    transform : translateY(14rem);
+} */
+
+.options
+{
+    position : absolute;
+    background-color: black;
+    bottom : 0px;
+    left : 0px;
+    z-index : 1;
+    width : 100vw;
+    height : 30vh;   
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box
+{
+    height : 100%;
+    width : 50vw;
+    display : inline-flex;
+    justify-content: center;
+    align-items: center;
+    position : relative;
+    color : white;
+
+}
+
+.lb:before{
+    position : relative;
+}
+
+
+.games:before
+{
+    content : '';
+    position : absolute;
+    height : 100%;
+    left : 0px;
+    width : 100%;
+    background : linear-gradient(
+         90deg,
+         transparent 0% 75%,
+        rgba(0,0,255,0.5) 100%
+        );
+    background-position: 0% 0%;
+    background-size: 300% 300%;
+    transition : background-position 0.5s cubic-bezier(1, 0, 0, 1);
+}
+
+.lb:before
+{
+    content : '';
+    position : absolute;
+    height : 100%;
+    left : 0px;
+    right : 0px;
+    width : 100%;
+    background : linear-gradient(
+         270deg,
+         transparent 75%,
+        #ff5300 100%
+        );
+    background-size: 300% 100%;
+    background-position: 100% 0%;
+    
+    transition : all 0.5s cubic-bezier(1, 0, 0, 1);
+}
+
+
+
+.games:hover >.game-subtitle > .card-subtitle-word
+{
+    opacity : 1;
+    transform : translateY(0%);
+    transition : opacity 0ms , transform 0.2s cubic-bezier(.90 , .06 , .15 , .90);
+}
+.games:hover::before {
+    background-position: 100% 100%;
+}
+
+.lb:hover::before
+{
+    background-position: 0% 100%;
+}
+
+
+
+.card-subtitle-word
+{
+    display : inline-block;
+    margin : 0vmin 0.3vmin;
+    position : relative;
+    transform : translateY(40%);
+    transition : opacity 0.5s cubic-bezier(1, 0, 0, 1);
+    opacity : 0;
+    color : white;
+}
+
+.lb:hover >.leaderboard-subtitle > .card-subtitle-word
+{
+    opacity : 1;
+    transform : translateY(0%);
+    transition : opacity 0ms , transform 0.2s cubic-bezier(.90 , .06 , .15 , .90);
+}
+
+.hvr >.txtAppear >.card-subtitle-word
+{
+    color : black;
+    text-transform:capitalize;
+}
+.hvr:hover >.txtAppear >.card-subtitle-word
+{
+    opacity : 1;
+    transform : translateY(0%);
+    transition : opacity 0ms , transform 0.2s cubic-bezier(.90 , .06 , .15 , .90);
+}
+
+.game-subtitle , .leaderboard-subtitle
+{
+    margin-top : 150px;
+}
+
+
+.logos
+{
+
+    opacity : 0.7;
+    font-size: 100px;
+    margin-left : 70px;
+    position : absolute;
+    left : 31.5%;
+    top : 20%;
+    transition: all 0.5s ease;
+
+}
+
+.box:hover > .logos
+{
+    opacity : 1;
+}
+
+
+
+
+
+
+
+
